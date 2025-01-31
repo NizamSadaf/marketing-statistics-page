@@ -7,7 +7,9 @@ export class Visitor extends Document {
   @Prop({ required: true })
   ip: string;
 
-  // eslint-disable-next-line prettier/prettier
+  @Prop({ required: true, default: 'Unknown' })
+  country: string;
+
   @Prop({ default: Date.now })
   timestamp: Date;
 }
